@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Calculadora de 13º salário líquido 2026 — fluxo.yz</title>
+  <meta name="description" content="Calcule grátis o 13º salário líquido de 2026: 1ª parcela até 30/11, 2ª parcela até 20/12, com INSS e IRRF das tabelas oficiais, inclusive a isenção de IR até R$ 5.000.">
+  <link rel="canonical" href="https://yurizanoni.com/calculadora-13o-salario/">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#a8445e">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="fluxo.yz">
+  <meta property="og:title" content="Calculadora de 13º salário líquido 2026 — fluxo.yz">
+  <meta property="og:description" content="Calcule grátis o 13º líquido de 2026: as duas parcelas, o INSS e o IRRF das tabelas oficiais, com a isenção de IR até R$ 5.000.">
+  <meta property="og:url" content="https://yurizanoni.com/calculadora-13o-salario/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Calculadora de 13º salário líquido 2026 — fluxo.yz">
+  <meta name="twitter:description" content="Calcule grátis o 13º líquido de 2026: 1ª e 2ª parcela, INSS e IRRF das tabelas oficiais.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quando cai a 1ª parcela do 13º salário?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A primeira parcela pode ser paga a partir de fevereiro e precisa ser depositada até 30 de novembro. A segunda parcela deve ser paga até 20 de dezembro."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A 1ª parcela do 13º tem desconto de INSS ou Imposto de Renda?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. A primeira parcela é metade do 13º bruto, sem desconto de INSS nem de Imposto de Renda. O INSS, o IRRF e, se houver, a pensão alimentícia incidem na segunda parcela."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como calcular o 13º salário proporcional?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Divida o salário bruto mensal (incluindo a média de horas extras e adicionais habituais) por 12 e multiplique pelos meses trabalhados no ano. Só entra o mês em que você trabalhou 15 dias ou mais."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A isenção de Imposto de Renda até R$ 5.000 vale para o 13º em 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. A redução da Lei nº 15.270/2025 também se aplica ao Imposto de Renda retido no 13º. Se o 13º bruto for de até R$ 5.000, o IRRF fica zerado. Entre R$ 5.000,01 e R$ 7.350 a redução é parcial; acima de R$ 7.350 não há essa redução."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Esta calculadora substitui o holerite ou um contador?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Ela é uma ferramenta de organização e estimativa. Não constitui aconselhamento financeiro ou contábil. O valor oficial é o do seu holerite ou o informado pelo empregador."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #fffafa;
+      --surface: #fdf3f5;
+      --fg: #3b1f2a;
+      --muted: #7b5a66;
+      --line: #efdadf;
+      --hero: #fbeef0;
+      --gold: #9a7421;
+      --gold-soft: #f6ead0;
+      --btn: #a8445e;
+      --btn-fg: #ffffff;
+      --lead: #5e3b48;
+      --meta: #8a6572;
+      --card: #ffffff;
+      --ok: #2c6b4a;
+      --warn: #8a5a00;
+      --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+      --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #1c1116;
+        --surface: #2a1a22;
+        --fg: #f8edf0;
+        --muted: #c4a3ae;
+        --line: #42272f;
+        --hero: #2a1a22;
+        --gold: #e3bf72;
+        --gold-soft: #3b2d16;
+        --btn: #e58aa3;
+        --btn-fg: #2a1019;
+        --lead: #e0c5cd;
+        --meta: #b99aa5;
+        --card: #24151c;
+        --ok: #8ed0ae;
+        --warn: #e3bf72;
+        color-scheme: dark;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 17px/1.55 var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--btn); }
+    a:hover { color: var(--fg); }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+    .skip {
+      position: absolute; left: 0.75rem; top: -4rem; z-index: 100;
+      background: var(--btn); color: var(--btn-fg); padding: 0.6rem 1rem;
+      border-radius: 8px; text-decoration: none;
+    }
+    .skip:focus { top: 0.75rem; }
+    .wrap { width: min(760px, calc(100% - 2rem)); margin-inline: auto; }
+    header.top {
+      background: var(--hero);
+      border-bottom: 1px solid var(--line);
+    }
+    header.top .wrap {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; min-height: 4rem; flex-wrap: wrap;
+      padding-block: 0.7rem;
+    }
+    .brand {
+      font-family: var(--font-display);
+      font-weight: 700; font-size: 1.15rem;
+      text-decoration: none; color: var(--fg); letter-spacing: 0.02em;
+    }
+    nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; justify-content: flex-end; }
+    @media (max-width: 639px) { nav { justify-content: flex-start; } }
+    nav a {
+      color: var(--muted); text-decoration: none; font-weight: 600;
+      font-size: 0.95rem;
+    }
+    nav a[aria-current="page"] { color: var(--fg); }
+    nav a:hover { color: var(--fg); }
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      letter-spacing: -0.01em; line-height: 1.15; text-wrap: balance;
+      margin: 0 0 0.6rem;
+    }
+    h1 { font-size: clamp(1.7rem, 5vw, 2.35rem); margin-top: 1.6rem; }
+    h2 { font-size: 1.35rem; margin-top: 2.2rem; }
+    p { margin: 0 0 0.9rem; }
+    .eyebrow {
+      margin: 1.5rem 0 0; font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold);
+    }
+    .lead { font-size: 1.08rem; color: var(--lead); max-width: 46rem; }
+    .card, .result-card, .box {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.15rem 1.15rem 1.25rem;
+      margin: 1.1rem 0;
+    }
+    .box { background: var(--surface); }
+    label { display: block; font-weight: 700; margin: 0.85rem 0 0.3rem; }
+    .optional { font-weight: 400; color: var(--muted); font-size: 0.92rem; }
+    input, select {
+      width: 100%; padding: 0.7rem 0.8rem; font: inherit; color: var(--fg);
+      background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+    }
+    .hint { display: block; margin-top: 0.3rem; font-size: 0.88rem; color: var(--muted); }
+    .row { display: grid; gap: 0.4rem 0.9rem; grid-template-columns: 1fr; }
+    @media (min-width: 640px) { .row { grid-template-columns: 1fr 1fr; } }
+    .form-actions { margin-top: 1.15rem; }
+    .btn {
+      display: inline-block; background: var(--btn); color: var(--btn-fg);
+      font-family: var(--font-body); font-weight: 700; font-size: 1rem;
+      text-decoration: none; border: 0; border-radius: 8px;
+      padding: 0.85rem 1.35rem; cursor: pointer;
+    }
+    .btn:hover { filter: brightness(0.95); color: var(--btn-fg); }
+    .btn-ghost {
+      background: transparent; color: var(--fg);
+      border: 1px solid var(--line); margin-left: 0.5rem;
+    }
+    .erro { color: #9b1c2c; font-weight: 600; margin: 0.6rem 0 0; }
+    .result-rows { list-style: none; margin: 0; padding: 0; }
+    .result-rows li {
+      display: flex; justify-content: space-between; gap: 1rem;
+      align-items: baseline; padding: 0.7rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .result-rows li[hidden] { display: none; }
+    .result-rows .label { color: var(--muted); }
+    .result-rows .label small { display: block; font-size: 0.82rem; font-weight: 400; }
+    .result-rows .val { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; white-space: nowrap; }
+    .result-rows .discount .val { color: var(--muted); }
+    .result-rows .highlight { background: var(--surface); margin: 0 -1.15rem; padding: 0.85rem 1.15rem; border-bottom: 1px solid var(--line); }
+    .result-rows .total { border-bottom: 0; padding-top: 0.95rem; }
+    .result-rows .total .val { font-size: 1.45rem; color: var(--ok); }
+    .breakdown { margin-top: 0.9rem; }
+    .breakdown summary { cursor: pointer; font-weight: 700; }
+    .breakdown p { margin: 0.6rem 0 0; color: var(--muted); font-size: 0.95rem; }
+    .placeholder { color: var(--muted); margin: 0; }
+    .prose p, .prose li { color: var(--lead); }
+    .prose ul { margin: 0 0 0.9rem; padding-left: 1.15rem; }
+    .tabela { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin: 0.8rem 0 1.1rem; }
+    .tabela th, .tabela td { text-align: left; padding: 0.45rem 0.5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .tabela th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+    .source-note { font-size: 0.9rem; color: var(--muted); }
+    .source-note a { font-weight: 600; }
+    details.faq {
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 10px; padding: 0.85rem 1rem; margin: 0 0 0.65rem;
+    }
+    details.faq summary { cursor: pointer; font-weight: 700; }
+    details.faq p { margin: 0.55rem 0 0; color: var(--muted); }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: 2.6rem; padding: 1.4rem 0 2.2rem;
+      color: var(--muted); font-size: 0.92rem;
+    }
+    footer p { margin: 0 0 0.45rem; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="../" aria-label="fluxo.yz, página inicial">fluxo.yz</a>
+      <nav aria-label="Principal">
+        <a href="../">Início</a>
+        <a href="./" aria-current="page">Calculadora do 13º</a>
+        <a href="../calculadora-orcamento-natal/">Orçamento de Natal</a>
+        <a href="../ofertas/">Ofertas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="wrap">
+    <p class="eyebrow">Ferramenta gratuita · 2026</p>
+    <h1>Calculadora de 13º salário líquido 2026</h1>
+    <p class="lead">Estime a 1ª parcela (até 30 de novembro, sem descontos), a 2ª parcela (até 20 de dezembro, com INSS e IRRF) e o total líquido, com as tabelas oficiais de 2026 — inclusive a redução de Imposto de Renda até R$&nbsp;5.000.</p>
+
+    <form class="card" id="form-13" novalidate>
+      <div class="row">
+        <div>
+          <label for="salario">Salário bruto mensal</label>
+          <input id="salario" name="salario" type="text" inputmode="decimal" autocomplete="off" required placeholder="Ex.: 3.500,00" aria-describedby="salario-hint">
+          <span class="hint" id="salario-hint">Valor do salário contratual, em reais, sem o 13º.</span>
+        </div>
+        <div>
+          <label for="meses">Meses trabalhados em 2026</label>
+          <select id="meses" name="meses" required>
+            <option value="1">1 mês</option>
+            <option value="2">2 meses</option>
+            <option value="3">3 meses</option>
+            <option value="4">4 meses</option>
+            <option value="5">5 meses</option>
+            <option value="6">6 meses</option>
+            <option value="7">7 meses</option>
+            <option value="8">8 meses</option>
+            <option value="9">9 meses</option>
+            <option value="10">10 meses</option>
+            <option value="11">11 meses</option>
+            <option value="12" selected>12 meses (ano inteiro)</option>
+          </select>
+          <span class="hint">Conte só os meses com 15 dias ou mais de trabalho.</span>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label for="dependentes">Nº de dependentes</label>
+          <input id="dependentes" name="dependentes" type="number" min="0" max="20" step="1" value="0" inputmode="numeric">
+          <span class="hint">Usado no IRRF (R$&nbsp;189,59 por dependente), quando essa dedução for melhor que o desconto simplificado.</span>
+        </div>
+        <div>
+          <label for="extras">Média de horas extras e adicionais <span class="optional">(opcional)</span></label>
+          <input id="extras" name="extras" type="text" inputmode="decimal" autocomplete="off" placeholder="Ex.: 200,00" aria-describedby="extras-hint">
+          <span class="hint" id="extras-hint">Média mensal de horas extras habituais, comissões ou adicionais. Deixe em branco se não houver.</span>
+        </div>
+      </div>
+      <div>
+        <label for="pensao">Pensão alimentícia no 13º <span class="optional">(opcional)</span></label>
+        <input id="pensao" name="pensao" type="text" inputmode="decimal" autocomplete="off" placeholder="Ex.: 500,00" aria-describedby="pensao-hint">
+        <span class="hint" id="pensao-hint">Valor da pensão incidente sobre o 13º, se houver. Entra como dedução do IR e como desconto no valor a receber.</span>
+      </div>
+      <p class="erro" id="erro" hidden></p>
+      <div class="form-actions">
+        <button class="btn" type="submit">Calcular o 13º líquido</button>
+      </div>
+    </form>
+
+    <section class="result-card" aria-live="polite">
+      <h2>Resultado</h2>
+      <p class="placeholder" id="placeholder">Preencha o salário e toque em Calcular o 13º líquido.</p>
+      <div id="resultado" hidden>
+        <ul class="result-rows">
+          <li>
+            <span class="label">13º bruto proporcional<small id="base-hint"></small></span>
+            <span class="val" id="out-bruto"></span>
+          </li>
+          <li>
+            <span class="label">1ª parcela<small>50% do bruto, sem descontos, até 30/11</small></span>
+            <span class="val" id="out-p1"></span>
+          </li>
+          <li class="discount">
+            <span class="label">INSS sobre o 13º integral</span>
+            <span class="val" id="out-inss"></span>
+          </li>
+          <li class="discount">
+            <span class="label">IRRF sobre o 13º integral<small id="irrf-hint"></small></span>
+            <span class="val" id="out-irrf"></span>
+          </li>
+          <li class="discount" id="linha-pensao" hidden>
+            <span class="label">Pensão alimentícia</span>
+            <span class="val" id="out-pensao"></span>
+          </li>
+          <li class="highlight">
+            <span class="label">2ª parcela<small>Bruto − 1ª parcela − INSS − IRRF − pensão, até 20/12</small></span>
+            <span class="val" id="out-p2"></span>
+          </li>
+          <li class="total">
+            <span class="label">13º líquido (1ª + 2ª)</span>
+            <span class="val" id="out-liq"></span>
+          </li>
+        </ul>
+        <details class="breakdown">
+          <summary>Como chegamos nesses valores</summary>
+          <p id="detalhes"></p>
+        </details>
+      </div>
+    </section>
+
+    <section class="box" id="agora" aria-label="E agora, como usar seu 13º?">
+      <h2>E agora, como usar seu 13º?</h2>
+      <p>Antes de o dinheiro cair, dê um destino a cada parte: dívidas, reserva, Natal e as contas de janeiro. Digite quanto quer separar para cada item — o que sobrar aparece na hora.</p>
+      <div class="row" id="alloc-items"></div>
+      <div id="allocres" style="margin-top:0.9rem"></div>
+      <p style="margin-top:1rem">Quer fazer isso no papel, com orçamento de Natal, lista de presentes, Black Friday e contas de janeiro? O <strong>Kit Fim de Ano Sem Dívidas</strong> é um PDF para imprimir, R$&nbsp;19,90, com Pix ou cartão.</p>
+      <p>Com o líquido estimado, dá para ver se presentes, ceia e as contas de janeiro cabem no mesmo bolo. Abra a <a href="../calculadora-orcamento-natal/">calculadora de orçamento de Natal</a>.</p>
+      <div class="cta-actions">
+        <a class="btn" href="https://pay.kiwify.com.br/gpDDOzI?utm_source=calculadora&amp;utm_medium=site&amp;utm_campaign=13o-2026&amp;utm_content=resultado">Ver o Kit Fim de Ano · R$ 19,90</a>
+        <a class="btn btn-ghost" href="../">Voltar ao início do fluxo.yz</a>
+      </div>
+    </section>
+
+    <section class="prose" id="como-funciona">
+      <h2>Como calcular o 13º salário líquido em 2026</h2>
+      <p>O 13º salário é um direito de quem trabalha com carteira assinada, inclusive empregados domésticos e trabalhadores avulsos. Pela Lei nº 4.090/1962, o valor integral corresponde a um salário mensal. Se você não trabalhou o ano inteiro, o pagamento é proporcional: divide-se o salário por 12 e multiplica-se pelos meses em que houve pelo menos 15 dias de trabalho.</p>
+      <p>O pagamento sai em duas parcelas. A primeira pode ser antecipada a partir de fevereiro e precisa ser paga até 30 de novembro. Quem formalizou o pedido em janeiro ainda pode recebê-la junto com as férias. Ela corresponde à metade do 13º bruto e não sofre desconto de INSS nem de Imposto de Renda. A segunda parcela deve ser paga até 20 de dezembro: dela saem o INSS, o IRRF e, se houver, a pensão alimentícia.</p>
+      <p>O INSS do 13º é calculado em separado do salário de dezembro, sobre o valor integral do 13º, com a tabela progressiva da Portaria Interministerial MPS/MF nº 13, de 9 de janeiro de 2026. As faixas de 2026 são estas:</p>
+      <table class="tabela">
+        <caption class="hint" style="text-align:left;caption-side:bottom;margin:0.4rem 0 0">Tabela de contribuição mensal do INSS, competência janeiro de 2026, para empregado, empregado doméstico e trabalhador avulso.</caption>
+        <thead><tr><th>Salário de contribuição</th><th>Alíquota da faixa</th></tr></thead>
+        <tbody>
+          <tr><td>Até R$ 1.621,00</td><td>7,5%</td></tr>
+          <tr><td>De R$ 1.621,01 a R$ 2.902,84</td><td>9%</td></tr>
+          <tr><td>De R$ 2.902,85 a R$ 4.354,27</td><td>12%</td></tr>
+          <tr><td>De R$ 4.354,28 a R$ 8.475,55 (teto)</td><td>14%</td></tr>
+        </tbody>
+      </table>
+      <p>O Imposto de Renda também incide só na segunda parcela, sobre o 13º já abatido da contribuição previdenciária e das demais deduções legais (dependentes e pensão alimentícia), ou do desconto simplificado de R$&nbsp;607,20, o que for mais vantajoso. A tabela progressiva mensal de 2026 da Receita Federal começa a tributar acima de R$&nbsp;2.428,80.</p>
+      <p>A novidade de 2026 é a redução da Lei nº 15.270/2025: se o 13º bruto for de até R$&nbsp;5.000, o IR retido na fonte fica zerado. Entre R$&nbsp;5.000,01 e R$&nbsp;7.350, a redução é parcial e vai diminuindo. Acima de R$&nbsp;7.350 não há essa redução. A Receita Federal confirma que essa regra também se aplica ao 13º.</p>
+      <p>Horas extras, comissões e adicionais habituais entram na base do 13º. Por isso esta calculadora pede a média mensal desses valores, se você os receber. O resultado é uma estimativa: o valor oficial é o do holerite, porque férias, múltiplos vínculos, regras da categoria ou um teto de INSS já usado no mês podem mudar a conta.</p>
+    </section>
+
+    <p class="source-note">
+      Fontes das tabelas (competência 2026):
+      INSS progressivo —
+      <a href="https://www.gov.br/inss/pt-br/direitos-e-deveres/inscricao-e-contribuicao/tabela-de-contribuicao-mensal" rel="noopener noreferrer" target="_blank">Tabela de contribuição mensal do INSS</a>,
+      conforme a Portaria Interministerial MPS/MF nº 13, de 9 de janeiro de 2026.
+      IRRF —
+      <a href="https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda/tabelas/2026" rel="noopener noreferrer" target="_blank">Tributação de 2026 da Receita Federal</a>
+      (tabela progressiva, Lei nº 15.191/2025; dedução de R$&nbsp;189,59 por dependente e desconto simplificado de R$&nbsp;607,20).
+      A redução que zera o IR até R$&nbsp;5.000 e reduz o imposto até R$&nbsp;7.350 <strong>também se aplica ao 13º</strong>, nos termos do art. 3º-A, § 3º, da Lei nº 9.250/1995, incluído pela Lei nº 15.270/2025, e da
+      <a href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/dezembro/receita-federal-orienta-fontes-pagadoras-e-contribuintes-a-calcular-a-reducao-do-imposto-de-renda-a-partir-de-1o-de-janeiro-de-2026" rel="noopener noreferrer" target="_blank">orientação da Receita Federal</a>.
+      O INSS do 13º é calculado em separado do salário do mês, conforme a nota 3 da tabela do INSS.
+    </p>
+
+    <h2>Perguntas frequentes</h2>
+    <details class="faq"><summary>Quando cai a 1ª parcela do 13º salário?</summary><p>A primeira parcela pode ser paga a partir de fevereiro e precisa ser depositada até 30 de novembro. A segunda parcela deve ser paga até 20 de dezembro.</p></details>
+    <details class="faq"><summary>A 1ª parcela do 13º tem desconto de INSS ou Imposto de Renda?</summary><p>Não. A primeira parcela é metade do 13º bruto, sem desconto de INSS nem de Imposto de Renda. O INSS, o IRRF e, se houver, a pensão alimentícia incidem na segunda parcela.</p></details>
+    <details class="faq"><summary>Como calcular o 13º salário proporcional?</summary><p>Divida o salário bruto mensal (incluindo a média de horas extras e adicionais habituais) por 12 e multiplique pelos meses trabalhados no ano. Só entra o mês em que você trabalhou 15 dias ou mais.</p></details>
+    <details class="faq"><summary>A isenção de Imposto de Renda até R$ 5.000 vale para o 13º em 2026?</summary><p>Sim. A redução da Lei nº 15.270/2025 também se aplica ao Imposto de Renda retido no 13º. Se o 13º bruto for de até R$ 5.000, o IRRF fica zerado. Entre R$ 5.000,01 e R$ 7.350 a redução é parcial; acima de R$ 7.350 não há essa redução.</p></details>
+    <details class="faq"><summary>Esta calculadora substitui o holerite ou um contador?</summary><p>Não. Ela é uma ferramenta de organização e estimativa. Não constitui aconselhamento financeiro ou contábil. O valor oficial é o do seu holerite ou o informado pelo empregador.</p></details>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>fluxo.yz · Calculadora de 13º salário líquido 2026</p>
+      <p>Ferramenta de organização e estimativa. Não constitui aconselhamento financeiro ou contábil.</p>
+      <p>Nenhum dado digitado aqui é enviado a lugar nenhum. <a href="../">Página inicial</a> · <a href="../calculadora-orcamento-natal/">Orçamento de Natal</a> · <a href="../ofertas/">Ofertas</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    "use strict";
+"use strict";
+
+var INSS_FAIXAS = [
+  { max: 1621.00, rate: 0.075 },
+  { max: 2902.84, rate: 0.09 },
+  { max: 4354.27, rate: 0.12 },
+  { max: 8475.55, rate: 0.14 }
+];
+var INSS_TETO = 8475.55;
+var IRRF_FAIXAS = [
+  { max: 2428.80, rate: 0, ded: 0 },
+  { max: 2826.65, rate: 0.075, ded: 182.16 },
+  { max: 3751.05, rate: 0.15, ded: 394.16 },
+  { max: 4664.68, rate: 0.225, ded: 675.49 },
+  { max: Infinity, rate: 0.275, ded: 908.73 }
+];
+var DED_DEPENDENTE = 189.59;
+var DESCONTO_SIMPLIFICADO = 607.20;
+var REDUCAO_ATE = 5000;
+var REDUCAO_TETO = 312.89;
+var REDUCAO_PARCIAL_ATE = 7350;
+var REDUCAO_CONST = 978.62;
+var REDUCAO_COEF = 0.133145;
+
+function arred(n) {
+  return Math.round(n * 100 + 1e-6) / 100;
+}
+
+function inssProgressivo(base) {
+  var b = Math.min(Math.max(base, 0), INSS_TETO);
+  var prev = 0;
+  var total = 0;
+  for (var i = 0; i < INSS_FAIXAS.length; i++) {
+    var f = INSS_FAIXAS[i];
+    if (b <= prev) break;
+    var fatia = Math.min(b, f.max) - prev;
+    total += fatia * f.rate;
+    prev = f.max;
+  }
+  return arred(total);
+}
+
+function irrfTabela(base) {
+  if (base <= 0) return 0;
+  for (var i = 0; i < IRRF_FAIXAS.length; i++) {
+    var f = IRRF_FAIXAS[i];
+    if (base <= f.max) {
+      return Math.max(0, arred(base * f.rate - f.ded));
+    }
+  }
+  return 0;
+}
+
+function reducaoIR(rendimento, imposto) {
+  if (imposto <= 0) return 0;
+  if (rendimento <= REDUCAO_ATE) {
+    return Math.min(imposto, REDUCAO_TETO);
+  }
+  if (rendimento <= REDUCAO_PARCIAL_ATE) {
+    var r = arred(REDUCAO_CONST - REDUCAO_COEF * rendimento);
+    return Math.max(0, Math.min(imposto, r));
+  }
+  return 0;
+}
+
+function calcular13(salario, meses, extras, dependentes, pensao) {
+  extras = extras || 0;
+  dependentes = dependentes || 0;
+  pensao = pensao || 0;
+  var baseRemuneracao = arred(salario + extras);
+  var bruto = arred(baseRemuneracao * (meses / 12));
+  var parcela1 = arred(bruto * 0.5);
+  var inss = inssProgressivo(bruto);
+  var deducaoLegal = arred(inss + dependentes * DED_DEPENDENTE + pensao);
+  var usouSimplificado = DESCONTO_SIMPLIFICADO > deducaoLegal;
+  var deducaoIR = usouSimplificado ? DESCONTO_SIMPLIFICADO : deducaoLegal;
+  var baseIR = Math.max(0, arred(bruto - deducaoIR));
+  var impostoTabela = irrfTabela(baseIR);
+  var reducao = reducaoIR(bruto, impostoTabela);
+  var irrf = arred(Math.max(0, impostoTabela - reducao));
+  var parcela2 = arred(bruto - parcela1 - inss - irrf - pensao);
+  var liquido = arred(parcela1 + parcela2);
+  return {
+    baseRemuneracao: baseRemuneracao,
+    bruto: bruto,
+    parcela1: parcela1,
+    inss: inss,
+    pensao: arred(pensao),
+    deducaoLegal: deducaoLegal,
+    usouSimplificado: usouSimplificado,
+    deducaoIR: deducaoIR,
+    baseIR: baseIR,
+    impostoTabela: impostoTabela,
+    reducao: reducao,
+    irrf: irrf,
+    parcela2: parcela2,
+    liquido: liquido,
+    meses: meses,
+    dependentes: dependentes
+  };
+}
+
+    window.calcular13 = calcular13;
+
+    function brl(n) {
+      return arred(n).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+    }
+
+    function parseMoney(raw) {
+      if (raw == null) return 0;
+      var s = String(raw).trim();
+      if (!s) return 0;
+      s = s.replace(/\s/g, "").replace(/R\$\s?/i, "");
+      if (s.indexOf(",") !== -1 && s.indexOf(".") !== -1) {
+        s = s.replace(/\./g, "").replace(",", ".");
+      } else if (s.indexOf(",") !== -1) {
+        s = s.replace(",", ".");
+      } else if (/^\d{1,3}(\.\d{3})+$/.test(s)) {
+        s = s.replace(/\./g, "");
+      }
+      var n = Number(s);
+      return isFinite(n) ? n : NaN;
+    }
+
+    var form = document.getElementById("form-13");
+    var erro = document.getElementById("erro");
+    var placeholder = document.getElementById("placeholder");
+    var resultado = document.getElementById("resultado");
+    var ultimoLiquido = 0;
+
+    function mostrarErro(msg) {
+      erro.hidden = false;
+      erro.textContent = msg;
+      placeholder.hidden = false;
+      resultado.hidden = true;
+    }
+
+    function lerCampos() {
+      var salario = parseMoney(document.getElementById("salario").value);
+      var extrasRaw = document.getElementById("extras").value;
+      var extras = extrasRaw.trim() === "" ? 0 : parseMoney(extrasRaw);
+      var pensaoRaw = document.getElementById("pensao").value;
+      var pensao = pensaoRaw.trim() === "" ? 0 : parseMoney(pensaoRaw);
+      var meses = Number(document.getElementById("meses").value);
+      var dependentes = Number(document.getElementById("dependentes").value);
+      return { salario: salario, extras: extras, pensao: pensao, meses: meses, dependentes: dependentes };
+    }
+
+    function validar(c) {
+      if (!isFinite(c.salario) || c.salario <= 0) return "Informe um salário bruto válido, maior que zero.";
+      if (!isFinite(c.extras) || c.extras < 0) return "A média de horas extras ou adicionais precisa ser um valor válido, ou ficar em branco.";
+      if (!isFinite(c.pensao) || c.pensao < 0) return "A pensão alimentícia precisa ser um valor válido, ou ficar em branco.";
+      if (!isFinite(c.meses) || c.meses < 1 || c.meses > 12) return "Informe os meses trabalhados, de 1 a 12.";
+      if (!isFinite(c.dependentes) || c.dependentes < 0 || c.dependentes > 20 || c.dependentes !== Math.floor(c.dependentes)) return "Informe o número de dependentes como um inteiro entre 0 e 20.";
+      return "";
+    }
+
+    function render(c) {
+      var r = calcular13(c.salario, c.meses, c.extras, c.dependentes, c.pensao);
+      ultimoLiquido = r.liquido;
+      document.getElementById("out-bruto").textContent = brl(r.bruto);
+      document.getElementById("out-p1").textContent = brl(r.parcela1);
+      document.getElementById("out-inss").textContent = "− " + brl(r.inss);
+      document.getElementById("out-irrf").textContent = "− " + brl(r.irrf);
+      document.getElementById("out-p2").textContent = brl(r.parcela2);
+      document.getElementById("out-liq").textContent = brl(r.liquido);
+
+      var linhaPensao = document.getElementById("linha-pensao");
+      if (r.pensao > 0) {
+        linhaPensao.hidden = false;
+        document.getElementById("out-pensao").textContent = "− " + brl(r.pensao);
+      } else {
+        linhaPensao.hidden = true;
+      }
+
+      var baseTxt = "Salário de " + brl(c.salario);
+      if (c.extras > 0) baseTxt += " + média de " + brl(c.extras);
+      baseTxt += " × " + r.meses + "/12";
+      document.getElementById("base-hint").textContent = baseTxt;
+
+      var irrfHint = "";
+      if (r.irrf === 0 && r.reducao > 0) {
+        irrfHint = "Isento após a redução de 2026 (13º de até R$ 5.000, ou redução que zerou o imposto).";
+      } else if (r.reducao > 0) {
+        irrfHint = "Já com a redução parcial da Lei nº 15.270/2025: " + brl(r.reducao) + ".";
+      } else if (r.impostoTabela === 0) {
+        irrfHint = "Abaixo da faixa de incidência da tabela progressiva.";
+      }
+      document.getElementById("irrf-hint").textContent = irrfHint;
+
+      var dedTxt = r.usouSimplificado
+        ? "desconto simplificado de " + brl(DESCONTO_SIMPLIFICADO) + " (mais vantajoso do que as deduções legais)"
+        : "deduções legais de " + brl(r.deducaoIR) + " (INSS" + (r.dependentes ? " + " + r.dependentes + " dependente(s)" : "") + (r.pensao ? " + pensão" : "") + ", maior que o simplificado)";
+
+      document.getElementById("detalhes").textContent =
+        "Base da remuneração: " + brl(r.baseRemuneracao) + ". " +
+        "13º bruto = base × " + r.meses + "/12 = " + brl(r.bruto) + ". " +
+        "INSS pela tabela progressiva de 2026, com teto de R$ 8.475,55, calculado só sobre o 13º: " + brl(r.inss) + ". " +
+        "Base do IRRF: " + brl(r.bruto) + " − " + dedTxt + " = " + brl(r.baseIR) + ". " +
+        "Imposto pela tabela progressiva: " + brl(r.impostoTabela) + ". " +
+        "Redução da Lei nº 15.270/2025, aplicada sobre o 13º bruto: " + brl(r.reducao) + ". " +
+        "IRRF final: " + brl(r.irrf) + ". " +
+        (r.pensao ? "Pensão descontada no pagamento: " + brl(r.pensao) + ". " : "") +
+        "2ª parcela = " + brl(r.bruto) + " − " + brl(r.parcela1) + " − " + brl(r.inss) + " − " + brl(r.irrf) + (r.pensao ? " − " + brl(r.pensao) : "") + " = " + brl(r.parcela2) + ".";
+
+      erro.hidden = true;
+      placeholder.hidden = true;
+      resultado.hidden = false;
+      atualizarAlocacao();
+    }
+
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var c = lerCampos();
+      var msg = validar(c);
+      if (msg) { mostrarErro(msg); return; }
+      render(c);
+      document.getElementById("resultado").scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+
+    var nomes = [
+      "Dívidas e parcelas atrasadas",
+      "Reserva de emergência",
+      "Presentes de Natal",
+      "Ceia e festas",
+      "Contas de janeiro (IPVA, IPTU, material escolar)",
+      "Lazer, viagem ou outros"
+    ];
+    var box = document.getElementById("alloc-items");
+    nomes.forEach(function (n, i) {
+      var d = document.createElement("div");
+      d.innerHTML = '<label for="a' + i + '">' + n + '</label><input id="a' + i + '" inputmode="decimal" placeholder="0,00" aria-label="' + n + '">';
+      box.appendChild(d);
+    });
+
+    function atualizarAlocacao() {
+      var used = 0;
+      nomes.forEach(function (n, i) { used += parseMoney(document.getElementById("a" + i).value) || 0; });
+      used = arred(used);
+      var left = arred(ultimoLiquido - used);
+      var out = document.getElementById("allocres");
+      if (ultimoLiquido <= 0 && used <= 0) {
+        out.innerHTML = '<p class="hint">Calcule o 13º acima para comparar com o que você já destinou.</p>';
+        return;
+      }
+      var warn = left < 0;
+      out.innerHTML =
+        '<ul class="result-rows">' +
+        '<li><span class="label">13º líquido estimado</span><span class="val">' + brl(ultimoLiquido) + '</span></li>' +
+        '<li><span class="label">Já destinado</span><span class="val">' + brl(used) + '</span></li>' +
+        '<li class="total"><span class="label">' + (warn ? "Passou do 13º em" : "Ainda sem destino") + '</span>' +
+        '<span class="val" style="' + (warn ? "color:var(--warn)" : "") + '">' + brl(Math.abs(left)) + '</span></li>' +
+        '</ul>';
+    }
+
+    document.getElementById("alloc-items").addEventListener("input", atualizarAlocacao);
+    atualizarAlocacao();
+  })();
+  </script>
+</body>
+</html>

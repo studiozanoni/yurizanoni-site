@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Calculadora de orçamento de Natal 2026 — fluxo.yz</title>
+  <meta name="description" content="Calcule grátis o orçamento de Natal 2026: presentes, ceia, decoração, viagens e contas de janeiro. Veja a sobra do 13º, se janeiro fecha e o teto por presente.">
+  <link rel="canonical" href="https://yurizanoni.com/calculadora-orcamento-natal/">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#a8445e">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="fluxo.yz">
+  <meta property="og:title" content="Calculadora de orçamento de Natal 2026 — fluxo.yz">
+  <meta property="og:description" content="Calcule grátis o orçamento de Natal 2026: total previsto, sobra ou falta, percentual do 13º, alerta de janeiro e teto por presente.">
+  <meta property="og:url" content="https://yurizanoni.com/calculadora-orcamento-natal/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Calculadora de orçamento de Natal 2026 — fluxo.yz">
+  <meta name="twitter:description" content="Presentes, ceia, janeiro e a sobra do 13º. Veja se o orçamento de Natal fecha e qual teto cabe em cada presente.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O que entra no valor disponível do orçamento de Natal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Entra o dinheiro extra que você decidiu usar neste fim de ano: o 13º líquido, um bônus ou outra renda. O salário que já cobre aluguel, mercado e as contas do mês fica de fora. Se o 13º ainda não está calculado, a calculadora de 13º salário estima o líquido com INSS e Imposto de Renda de 2026."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Por que IPTU, IPVA e a fatura do cartão entram no orçamento de Natal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Porque essas contas vencem em janeiro, quando o dinheiro de dezembro já foi gasto. A calculadora soma IPTU, IPVA, material escolar, matrícula e fatura e compara com o que sobra depois de presentes, ceia, decoração e viagens. Se esse resto não cobre as contas, o alerta avisa que janeiro não fecha."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como é calculado o teto por presente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Primeiro saem do valor disponível as contas de janeiro, a ceia, a decoração, as viagens ou confraternizações e a reserva desejada. O que resta é dividido pelo número de presentes que têm nome ou valor na lista. Linhas em branco não entram. O resultado é um teto igual por pessoa; dá para gastar menos com uma e mais com outra, desde que a soma não passe do total."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A reserva desejada conta como gasto de Natal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Ela fica de fora do total gasto previsto e entra só na conta do que está comprometido, junto com os gastos. Se a sobra ficar negativa, a reserva é o primeiro número a rever. Contas de janeiro com data e multa pedem prioridade sobre um presente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Esta calculadora diz o valor exato que vou gastar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Ela soma os números que você informa e mostra o total previsto, a sobra ou a falta, a porcentagem do 13º comprometida, o alerta de janeiro e um teto por presente. Preços mudam. Ferramenta de organização e estimativa. Não constitui aconselhamento financeiro."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #fffafa;
+      --surface: #fdf3f5;
+      --fg: #3b1f2a;
+      --muted: #7b5a66;
+      --line: #efdadf;
+      --hero: #fbeef0;
+      --gold: #9a7421;
+      --gold-soft: #f6ead0;
+      --btn: #a8445e;
+      --btn-fg: #ffffff;
+      --lead: #5e3b48;
+      --meta: #8a6572;
+      --card: #ffffff;
+      --ok: #2c6b4a;
+      --warn: #8a5a00;
+      --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+      --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #1c1116;
+        --surface: #2a1a22;
+        --fg: #f8edf0;
+        --muted: #c4a3ae;
+        --line: #42272f;
+        --hero: #2a1a22;
+        --gold: #e3bf72;
+        --gold-soft: #3b2d16;
+        --btn: #e58aa3;
+        --btn-fg: #2a1019;
+        --lead: #e0c5cd;
+        --meta: #b99aa5;
+        --card: #24151c;
+        --ok: #8ed0ae;
+        --warn: #e3bf72;
+        color-scheme: dark;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 17px/1.55 var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--btn); }
+    a:hover { color: var(--fg); }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+    .skip {
+      position: absolute; left: 0.75rem; top: -4rem; z-index: 100;
+      background: var(--btn); color: var(--btn-fg); padding: 0.6rem 1rem;
+      border-radius: 8px; text-decoration: none;
+    }
+    .skip:focus { top: 0.75rem; }
+    .wrap { width: min(760px, calc(100% - 2rem)); margin-inline: auto; }
+    header.top {
+      background: var(--hero);
+      border-bottom: 1px solid var(--line);
+    }
+    header.top .wrap {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; min-height: 4rem; flex-wrap: wrap;
+      padding-block: 0.7rem;
+    }
+    .brand {
+      font-family: var(--font-display);
+      font-weight: 700; font-size: 1.15rem;
+      text-decoration: none; color: var(--fg); letter-spacing: 0.02em;
+    }
+    nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; justify-content: flex-end; }
+    @media (max-width: 639px) { nav { justify-content: flex-start; } }
+    nav a {
+      color: var(--muted); text-decoration: none; font-weight: 600;
+      font-size: 0.95rem;
+    }
+    nav a[aria-current="page"] { color: var(--fg); }
+    nav a:hover { color: var(--fg); }
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      letter-spacing: -0.01em; line-height: 1.15; text-wrap: balance;
+      margin: 0 0 0.6rem;
+    }
+    h1 { font-size: clamp(1.7rem, 5vw, 2.35rem); margin-top: 1.6rem; }
+    h2 { font-size: 1.35rem; margin-top: 2.2rem; }
+    p { margin: 0 0 0.9rem; }
+    .eyebrow {
+      margin: 1.5rem 0 0; font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold);
+    }
+    .lead { font-size: 1.08rem; color: var(--lead); max-width: 46rem; }
+    .card, .result-card, .box {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.15rem 1.15rem 1.25rem;
+      margin: 1.1rem 0;
+    }
+    .box { background: var(--surface); }
+    fieldset { border: 0; margin: 1.15rem 0 0; padding: 0; min-inline-size: 0; }
+    legend {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.08rem;
+      padding: 0;
+      margin: 0 0 0.15rem;
+    }
+    label { display: block; font-weight: 700; margin: 0.85rem 0 0.3rem; }
+    .optional { font-weight: 400; color: var(--muted); font-size: 0.92rem; }
+    input, select {
+      width: 100%; padding: 0.7rem 0.8rem; font: inherit; color: var(--fg);
+      background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+    }
+    .hint { display: block; margin-top: 0.3rem; font-size: 0.88rem; color: var(--muted); font-weight: 400; }
+    .row { display: grid; gap: 0.4rem 0.9rem; grid-template-columns: 1fr; }
+    @media (min-width: 640px) {
+      .row { grid-template-columns: 1fr 1fr; }
+      .row.row-3 { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .gift-list { display: flex; flex-direction: column; gap: 0.85rem; margin-top: 0.85rem; }
+    .gift-row {
+      display: grid;
+      gap: 0.45rem;
+      grid-template-columns: 1fr;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .gift-row label { margin: 0; font-size: 0.82rem; color: var(--muted); }
+    .gift-row input { margin-top: 0.25rem; color: var(--fg); font-weight: 400; }
+    @media (min-width: 640px) {
+      .gift-row { grid-template-columns: 1.5fr 0.8fr auto; align-items: end; }
+    }
+    .form-actions { margin-top: 1.15rem; }
+    .btn {
+      display: inline-block; background: var(--btn); color: var(--btn-fg);
+      font-family: var(--font-body); font-weight: 700; font-size: 1rem;
+      text-decoration: none; border: 0; border-radius: 8px;
+      padding: 0.85rem 1.35rem; cursor: pointer;
+    }
+    .btn:hover { filter: brightness(0.95); color: var(--btn-fg); }
+    .btn-ghost {
+      background: transparent; color: var(--fg);
+      border: 1px solid var(--line); margin-left: 0.5rem;
+    }
+    .btn-add { margin: 0.85rem 0 0; margin-left: 0; }
+    .btn-remove {
+      background: transparent; color: var(--fg);
+      border: 1px solid var(--line); border-radius: 8px;
+      font: inherit; font-weight: 600; font-size: 0.92rem;
+      padding: 0.7rem 0.8rem; cursor: pointer; text-align: center;
+    }
+    .btn-remove:hover { color: var(--btn); }
+    button:disabled { opacity: 0.55; cursor: not-allowed; }
+    @media (max-width: 639px) {
+      .form-actions .btn, .btn-add, .cta-actions .btn { display: block; width: 100%; text-align: center; }
+      .btn-ghost { margin-left: 0; }
+    }
+    .erro { color: #9b1c2c; font-weight: 600; margin: 0.6rem 0 0; }
+    .result-rows { list-style: none; margin: 0; padding: 0; }
+    .result-rows li {
+      display: flex; justify-content: space-between; gap: 1rem;
+      align-items: baseline; padding: 0.7rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .result-rows li[hidden] { display: none; }
+    .result-rows .label { color: var(--muted); }
+    .result-rows .label small { display: block; font-size: 0.82rem; font-weight: 400; }
+    .result-rows .val { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; white-space: nowrap; }
+    .result-rows .discount .val { color: var(--muted); }
+    .result-rows .highlight { background: var(--surface); margin: 0 -1.15rem; padding: 0.85rem 1.15rem; border-bottom: 1px solid var(--line); }
+    .result-rows .total { border-bottom: 0; padding-top: 0.95rem; }
+    .result-rows .total .val { font-size: 1.45rem; color: var(--ok); }
+    .result-rows .val.is-warn, .result-rows .total .val.is-warn { color: var(--warn); }
+    .notice {
+      margin: 0.95rem 0 0;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+    .notice strong { display: block; margin-bottom: 0.15rem; }
+    .notice.warn { background: var(--gold-soft); border-color: transparent; }
+    .notice.warn strong { color: var(--warn); }
+    .notice.ok strong { color: var(--ok); }
+    .breakdown { margin-top: 0.9rem; }
+    .breakdown summary { cursor: pointer; font-weight: 700; }
+    .breakdown p { margin: 0.6rem 0 0; color: var(--muted); font-size: 0.95rem; }
+    .placeholder { color: var(--muted); margin: 0; }
+    .prose p, .prose li { color: var(--lead); }
+    .prose ul { margin: 0 0 0.9rem; padding-left: 1.15rem; }
+    .source-note { font-size: 0.9rem; color: var(--muted); }
+    details.faq {
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 10px; padding: 0.85rem 1rem; margin: 0 0 0.65rem;
+    }
+    details.faq summary { cursor: pointer; font-weight: 700; }
+    details.faq p { margin: 0.55rem 0 0; color: var(--muted); }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: 2.6rem; padding: 1.4rem 0 2.2rem;
+      color: var(--muted); font-size: 0.92rem;
+    }
+    footer p { margin: 0 0 0.45rem; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="../" aria-label="fluxo.yz, página inicial">fluxo.yz</a>
+      <nav aria-label="Principal">
+        <a href="../">Início</a>
+        <a href="../calculadora-13o-salario/">Calculadora do 13º</a>
+        <a href="./" aria-current="page">Orçamento de Natal</a>
+        <a href="../ofertas/">Ofertas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="wrap">
+    <p class="eyebrow">Ferramenta gratuita · Natal 2026</p>
+    <h1>Calculadora de orçamento de Natal 2026</h1>
+    <p class="lead">Some o 13º ou a renda extra, os presentes, a ceia, a decoração, as viagens e as contas de janeiro. A conta mostra o total previsto, o que sobra ou falta, quanto do 13º fica comprometido e um teto por presente.</p>
+
+    <form class="card" id="form-natal" novalidate>
+      <div>
+        <label for="disponivel">Valor disponível <span class="optional">(13º ou renda extra)</span></label>
+        <input id="disponivel" name="disponivel" type="text" inputmode="decimal" autocomplete="off" required placeholder="Ex.: 3.500,00" aria-describedby="disponivel-hint">
+        <span class="hint" id="disponivel-hint">Use o líquido que você pode destinar a este fim de ano. O salário que já paga as contas do mês fica de fora. Se ainda não sabe o 13º, calcule na <a href="../calculadora-13o-salario/">calculadora de 13º salário</a>.</span>
+      </div>
+
+      <fieldset>
+        <legend>Contas de janeiro</legend>
+        <span class="hint">IPTU, IPVA, material escolar, matrícula e a fatura do cartão. Deixe em branco o que não se aplica.</span>
+        <div class="row">
+          <div>
+            <label for="iptu">IPTU</label>
+            <input id="iptu" name="iptu" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00">
+          </div>
+          <div>
+            <label for="ipva">IPVA</label>
+            <input id="ipva" name="ipva" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00">
+          </div>
+          <div>
+            <label for="material">Material escolar</label>
+            <input id="material" name="material" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00">
+          </div>
+          <div>
+            <label for="matricula">Matrícula</label>
+            <input id="matricula" name="matricula" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00">
+          </div>
+          <div>
+            <label for="fatura">Fatura do cartão</label>
+            <input id="fatura" name="fatura" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00" aria-describedby="fatura-hint">
+            <span class="hint" id="fatura-hint">Inclua o que já foi parcelado e o que ainda pretende lançar em dezembro.</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Presentes</legend>
+        <span class="hint" id="presentes-hint">Uma linha por pessoa. Dá para acrescentar e remover. Linha em branco não entra na conta.</span>
+        <div id="lista-presentes" class="gift-list"></div>
+        <button type="button" class="btn btn-ghost btn-add" id="add-presente">Adicionar presente</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Ceia, decoração e encontros</legend>
+        <div class="row row-3">
+          <div>
+            <label for="ceia">Ceia</label>
+            <input id="ceia" name="ceia" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00">
+          </div>
+          <div>
+            <label for="decoracao">Decoração</label>
+            <input id="decoracao" name="decoracao" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00">
+          </div>
+          <div>
+            <label for="viagens">Viagens e confraternizações</label>
+            <input id="viagens" name="viagens" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00">
+          </div>
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="reserva">Reserva desejada</label>
+        <input id="reserva" name="reserva" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00" aria-describedby="reserva-hint">
+        <span class="hint" id="reserva-hint">Quanto você quer guardar e não gastar. Entra no que fica comprometido e fica de fora do total gasto.</span>
+      </div>
+
+      <p class="erro" id="erro" hidden></p>
+      <div class="form-actions">
+        <button class="btn" type="submit">Calcular o orçamento</button>
+      </div>
+    </form>
+
+    <section class="result-card" id="painel-resultado" aria-live="polite">
+      <h2>Resultado</h2>
+      <p class="placeholder" id="placeholder">Preencha o valor disponível e toque em Calcular o orçamento.</p>
+      <div id="resultado" hidden>
+        <ul class="result-rows">
+          <li>
+            <span class="label">Valor disponível<small>13º ou renda extra</small></span>
+            <span class="val" id="out-disponivel"></span>
+          </li>
+          <li class="discount">
+            <span class="label">Contas de janeiro<small id="out-janeiro-hint"></small></span>
+            <span class="val" id="out-janeiro"></span>
+          </li>
+          <li class="discount">
+            <span class="label">Presentes<small id="out-presentes-hint"></small></span>
+            <span class="val" id="out-presentes"></span>
+          </li>
+          <li class="discount">
+            <span class="label">Ceia</span>
+            <span class="val" id="out-ceia"></span>
+          </li>
+          <li class="discount">
+            <span class="label">Decoração</span>
+            <span class="val" id="out-decoracao"></span>
+          </li>
+          <li class="discount">
+            <span class="label">Viagens e confraternizações</span>
+            <span class="val" id="out-viagens"></span>
+          </li>
+          <li class="highlight">
+            <span class="label">Total gasto previsto<small>Janeiro + presentes + ceia + decoração + viagens</small></span>
+            <span class="val" id="out-total"></span>
+          </li>
+          <li class="discount">
+            <span class="label">Reserva desejada<small>Fora do gasto; entra no comprometido</small></span>
+            <span class="val" id="out-reserva"></span>
+          </li>
+          <li>
+            <span class="label">% do 13º comprometido<small>Gastos previstos + reserva, sobre o valor disponível</small></span>
+            <span class="val" id="out-pct"></span>
+          </li>
+          <li class="total">
+            <span class="label"><span id="out-saldo-label">Sobra</span><small id="out-saldo-hint"></small></span>
+            <span class="val" id="out-saldo"></span>
+          </li>
+        </ul>
+        <div class="notice" id="aviso-janeiro"></div>
+        <div class="notice" id="aviso-teto"></div>
+        <details class="breakdown">
+          <summary>Como chegamos nesses valores</summary>
+          <p id="detalhes"></p>
+        </details>
+      </div>
+    </section>
+
+    <section class="box" id="kit" aria-label="Planeje o fim de ano inteiro">
+      <h2>Planeje o fim de ano inteiro</h2>
+      <p>A conta desta página é o rascunho. O <strong>Kit Fim de Ano Sem Dívidas</strong> leva o mesmo planejamento para o papel: 13º, lista de presentes, Black Friday e contas de janeiro. PDF para imprimir, por R$&nbsp;19,90, com Pix ou cartão.</p>
+      <div class="cta-actions">
+        <a class="btn" href="https://pay.kiwify.com.br/gpDDOzI?utm_source=calculadora&amp;utm_medium=site&amp;utm_campaign=natal-2026&amp;utm_content=resultado">Planeje o fim de ano inteiro · R$ 19,90</a>
+        <a class="btn btn-ghost" href="../calculadora-13o-salario/">Calculadora do 13º salário</a>
+      </div>
+    </section>
+
+    <section class="prose" id="como-funciona">
+      <h2>Como organizar o orçamento de Natal sem deixar janeiro no vermelho</h2>
+      <p>O fim de ano junta dois movimentos que quase sempre se chocam. Em dezembro entra uma renda extra — o 13º, um bônus ou uma venda a mais — e saem presentes, ceia, decoração e, em muitas casas, uma viagem ou a confraternização. Em janeiro vencem IPTU, IPVA, material escolar, matrícula e a fatura do cartão. Quem olha só o saldo de dezembro descobre o buraco quando o boleto chega.</p>
+      <p>No valor disponível entra apenas o dinheiro deste ciclo, em geral o 13º líquido. O salário que já paga aluguel, mercado e as contas do mês fica de fora: misturar os dois faz o Natal parecer mais folgado do que é. Se o líquido ainda não está fechado, a <a href="../calculadora-13o-salario/">calculadora de 13º salário</a> estima as duas parcelas, com INSS e Imposto de Renda de 2026.</p>
+      <p>As contas de janeiro pedem valor por valor. IPTU e IPVA seguem o calendário da cidade e do estado; material e matrícula mudam com a escola; a fatura precisa incluir o que já foi parcelado e o que ainda vai para o cartão em dezembro. O que não existir na sua casa fica em branco e entra como zero.</p>
+      <p>A lista de presentes pede nome e valor, com linhas para acrescentar ou remover. Ceia, decoração e viagens ou confraternizações ficam em campos próprios, sem se misturar ao presente. A reserva desejada também fica separada: é o pedaço intocado para começar 2027 e não entra no total gasto previsto.</p>
+      <p>O total gasto previsto soma janeiro, presentes, ceia, decoração e viagens. A sobra ou a falta desconta esses gastos e a reserva do valor disponível. A porcentagem mostra quanto do 13º, ou da renda extra, já ficou comprometido. Acima de 100%, a conta não fecha com os números digitados.</p>
+      <p>O alerta de janeiro compara o que sobra depois dos gastos de Natal com IPTU, IPVA, material, matrícula e fatura. Se esse resto for menor, janeiro não fecha, mesmo quando a festa parece barata. Essas contas têm data, e várias têm multa ou juros.</p>
+      <p>O teto por presente divide o que ainda cabe em presentes pelo número de pessoas na lista. Antes da divisão, a conta reserva janeiro, a ceia, a decoração, as viagens e a reserva. Linhas em branco não entram. Se a soma atual passar do teto, o valor sugerido é o máximo por pessoa para a conta voltar a fechar.</p>
+      <p>Use o resultado como rascunho. Preço de ceia, passagem e brinquedo muda, e um presente em grupo pode substituir vários. Quando a sobra ficar positiva e o alerta de janeiro sumir, anote data, valor e de onde sai cada pagamento.</p>
+    </section>
+
+    <p class="source-note">Os valores são os que você informa. A página não busca tabela de IPTU, IPVA, escola nem operadora de cartão. O 13º líquido, quando for o caso, pode ser estimado na <a href="../calculadora-13o-salario/">calculadora de 13º salário</a>, com as tabelas oficiais de INSS e IRRF de 2026.</p>
+
+    <h2>Perguntas frequentes</h2>
+    <details class="faq"><summary>O que entra no valor disponível do orçamento de Natal?</summary><p>Entra o dinheiro extra que você decidiu usar neste fim de ano: o 13º líquido, um bônus ou outra renda. O salário que já cobre aluguel, mercado e as contas do mês fica de fora. Se o 13º ainda não está calculado, a calculadora de 13º salário estima o líquido com INSS e Imposto de Renda de 2026.</p></details>
+    <details class="faq"><summary>Por que IPTU, IPVA e a fatura do cartão entram no orçamento de Natal?</summary><p>Porque essas contas vencem em janeiro, quando o dinheiro de dezembro já foi gasto. A calculadora soma IPTU, IPVA, material escolar, matrícula e fatura e compara com o que sobra depois de presentes, ceia, decoração e viagens. Se esse resto não cobre as contas, o alerta avisa que janeiro não fecha.</p></details>
+    <details class="faq"><summary>Como é calculado o teto por presente?</summary><p>Primeiro saem do valor disponível as contas de janeiro, a ceia, a decoração, as viagens ou confraternizações e a reserva desejada. O que resta é dividido pelo número de presentes que têm nome ou valor na lista. Linhas em branco não entram. O resultado é um teto igual por pessoa; dá para gastar menos com uma e mais com outra, desde que a soma não passe do total.</p></details>
+    <details class="faq"><summary>A reserva desejada conta como gasto de Natal?</summary><p>Não. Ela fica de fora do total gasto previsto e entra só na conta do que está comprometido, junto com os gastos. Se a sobra ficar negativa, a reserva é o primeiro número a rever. Contas de janeiro com data e multa pedem prioridade sobre um presente.</p></details>
+    <details class="faq"><summary>Esta calculadora diz o valor exato que vou gastar?</summary><p>Não. Ela soma os números que você informa e mostra o total previsto, a sobra ou a falta, a porcentagem do 13º comprometida, o alerta de janeiro e um teto por presente. Preços mudam. Ferramenta de organização e estimativa. Não constitui aconselhamento financeiro.</p></details>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>fluxo.yz · Calculadora de orçamento de Natal 2026</p>
+      <p>Ferramenta de organização e estimativa. Não constitui aconselhamento financeiro.</p>
+      <p>Nenhum dado digitado aqui é enviado a lugar nenhum. <a href="../">Página inicial</a> · <a href="../calculadora-13o-salario/">Calculadora do 13º</a> · <a href="../ofertas/">Ofertas</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    "use strict";
+
+    var LIMITE_PRESENTES = 30;
+
+    function arred(n) {
+      if (!isFinite(n)) return NaN;
+      var sinal = n < 0 ? -1 : 1;
+      return sinal * Math.round(Math.abs(n) * 100 + 1e-6) / 100;
+    }
+
+    function brl(n) {
+      return arred(n).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+    }
+
+    function formatPct(n) {
+      var rounded = Math.round(n * 10) / 10;
+      var inteiro = Math.abs(rounded - Math.round(rounded)) < 1e-9;
+      return rounded.toLocaleString("pt-BR", {
+        minimumFractionDigits: inteiro ? 0 : 1,
+        maximumFractionDigits: 1
+      }) + "%";
+    }
+
+    function parseMoney(raw) {
+      if (raw == null) return 0;
+      var s = String(raw).trim();
+      if (!s) return 0;
+      s = s.replace(/\s/g, "").replace(/R\$\s?/i, "");
+      if (s.indexOf(",") !== -1 && s.indexOf(".") !== -1) {
+        s = s.replace(/\./g, "").replace(",", ".");
+      } else if (s.indexOf(",") !== -1) {
+        s = s.replace(",", ".");
+      } else if (/^\d{1,3}(\.\d{3})+$/.test(s)) {
+        s = s.replace(/\./g, "");
+      }
+      var n = Number(s);
+      return isFinite(n) ? n : NaN;
+    }
+
+    function calcularOrcamento(d) {
+      var lista = d.lista || [];
+      var presentes = arred(lista.reduce(function (soma, item) {
+        return soma + (Number(item.valor) || 0);
+      }, 0));
+      var iptu = arred(d.iptu || 0);
+      var ipva = arred(d.ipva || 0);
+      var material = arred(d.material || 0);
+      var matricula = arred(d.matricula || 0);
+      var fatura = arred(d.fatura || 0);
+      var ceia = arred(d.ceia || 0);
+      var decoracao = arred(d.decoracao || 0);
+      var viagens = arred(d.viagens || 0);
+      var reserva = arred(d.reserva || 0);
+      var disponivel = arred(d.disponivel || 0);
+      var janeiro = arred(iptu + ipva + material + matricula + fatura);
+      var natal = arred(presentes + ceia + decoracao + viagens);
+      var totalGasto = arred(janeiro + natal);
+      var comprometido = arred(totalGasto + reserva);
+      var diferenca = arred(disponivel - comprometido);
+      var percentual = disponivel > 0 ? (comprometido / disponivel) * 100 : null;
+      var sobraAposNatal = arred(disponivel - natal);
+      var situacaoJaneiro = "vazio";
+      if (janeiro > 0) {
+        situacaoJaneiro = sobraAposNatal + 0.001 >= janeiro ? "fecha" : "nao-fecha";
+      }
+      var faltaJaneiro = situacaoJaneiro === "nao-fecha" ? arred(janeiro - sobraAposNatal) : 0;
+      var nPresentes = lista.length;
+      var orcamentoPresentes = arred(disponivel - janeiro - ceia - decoracao - viagens - reserva);
+      var teto = nPresentes > 0 ? arred(orcamentoPresentes / nPresentes) : null;
+      return {
+        disponivel: disponivel,
+        iptu: iptu,
+        ipva: ipva,
+        material: material,
+        matricula: matricula,
+        fatura: fatura,
+        janeiro: janeiro,
+        lista: lista,
+        presentes: presentes,
+        ceia: ceia,
+        decoracao: decoracao,
+        viagens: viagens,
+        natal: natal,
+        totalGasto: totalGasto,
+        reserva: reserva,
+        comprometido: comprometido,
+        diferenca: diferenca,
+        percentual: percentual,
+        sobraAposNatal: sobraAposNatal,
+        situacaoJaneiro: situacaoJaneiro,
+        faltaJaneiro: faltaJaneiro,
+        nPresentes: nPresentes,
+        orcamentoPresentes: orcamentoPresentes,
+        teto: teto
+      };
+    }
+
+    window.calcularOrcamento = calcularOrcamento;
+
+    var form = document.getElementById("form-natal");
+    var erro = document.getElementById("erro");
+    var placeholder = document.getElementById("placeholder");
+    var resultado = document.getElementById("resultado");
+    var lista = document.getElementById("lista-presentes");
+    var addBtn = document.getElementById("add-presente");
+    var jaCalculou = false;
+
+    var CAMPOS = [
+      ["disponivel", "o valor disponível"],
+      ["iptu", "o IPTU"],
+      ["ipva", "o IPVA"],
+      ["material", "o material escolar"],
+      ["matricula", "a matrícula"],
+      ["fatura", "a fatura do cartão"],
+      ["ceia", "a ceia"],
+      ["decoracao", "a decoração"],
+      ["viagens", "as viagens e confraternizações"],
+      ["reserva", "a reserva desejada"]
+    ];
+
+    function lerValor(id) {
+      var raw = document.getElementById(id).value;
+      if (raw.trim() === "") return 0;
+      return parseMoney(raw);
+    }
+
+    function lerPresentes() {
+      var linhas = lista.querySelectorAll(".gift-row");
+      var itens = [];
+      for (var i = 0; i < linhas.length; i++) {
+        var nome = linhas[i].querySelector(".gift-nome").value.trim();
+        var raw = linhas[i].querySelector(".gift-valor").value;
+        var vazio = raw.trim() === "";
+        if (!nome && vazio) continue;
+        var valor = vazio ? 0 : parseMoney(raw);
+        if (!isFinite(valor) || valor < 0) {
+          var quem = nome ? "de " + nome : "da linha " + (i + 1);
+          return { erro: "O valor do presente " + quem + " precisa ser zero ou maior, no formato 50,00." };
+        }
+        itens.push({ nome: nome, valor: arred(valor) });
+      }
+      return { lista: itens };
+    }
+
+    function lerCampos() {
+      var dados = {};
+      for (var i = 0; i < CAMPOS.length; i++) {
+        var id = CAMPOS[i][0];
+        var nome = CAMPOS[i][1];
+        var n = lerValor(id);
+        if (!isFinite(n) || n < 0) {
+          return { erro: "Informe " + nome + " com um valor válido, zero ou maior. Exemplo: 150,00." };
+        }
+        dados[id] = arred(n);
+      }
+      if (dados.disponivel <= 0) {
+        return { erro: "Informe o valor disponível, maior que zero. Pode ser o 13º líquido ou outra renda extra." };
+      }
+      var presentes = lerPresentes();
+      if (presentes.erro) return { erro: presentes.erro };
+      dados.lista = presentes.lista;
+      return { dados: dados };
+    }
+
+    function mostrarErro(msg) {
+      erro.hidden = false;
+      erro.textContent = msg;
+      placeholder.hidden = false;
+      resultado.hidden = true;
+    }
+
+    function setNotice(el, kind, title, body) {
+      el.className = "notice " + kind;
+      el.replaceChildren();
+      var strong = document.createElement("strong");
+      strong.textContent = title;
+      var span = document.createElement("span");
+      span.textContent = body;
+      el.append(strong, span);
+    }
+
+    function textoTeto(r) {
+      if (r.nPresentes === 0) {
+        if (r.orcamentoPresentes > 0) {
+          return {
+            kind: "info",
+            title: "Teto por presente",
+            body: "Ainda não há presentes com nome ou valor. O que cabe na lista inteira, depois de janeiro, ceia, decoração, viagens e da reserva, é " + brl(r.orcamentoPresentes) + "."
+          };
+        }
+        return {
+          kind: "warn",
+          title: "Sem margem para presentes",
+          body: "Janeiro, ceia, decoração, viagens e a reserva já passam do valor disponível em " + brl(Math.abs(r.orcamentoPresentes)) + ". Não sobra um teto para presentes."
+        };
+      }
+      if (r.orcamentoPresentes < 0) {
+        var pessoas = r.nPresentes === 1 ? "o presente da lista" : "os " + r.nPresentes + " presentes";
+        return {
+          kind: "warn",
+          title: "Sem margem para presentes",
+          body: "Janeiro, ceia, decoração, viagens e a reserva já passam do valor disponível em " + brl(Math.abs(r.orcamentoPresentes)) + ". Não há teto positivo para dividir entre " + pessoas + "."
+        };
+      }
+      var exato = arred(r.teto * r.nPresentes) === r.orcamentoPresentes;
+      var cada = exato ? brl(r.teto) : "cerca de " + brl(r.teto);
+      var meio = r.nPresentes === 1
+        ? cada + " para o presente da lista, dentro de " + brl(r.orcamentoPresentes) + " no total."
+        : cada + " para cada um dos " + r.nPresentes + " presentes, dentro de " + brl(r.orcamentoPresentes) + " no total.";
+      meio = meio.charAt(0).toUpperCase() + meio.slice(1);
+      var passa = r.presentes > r.orcamentoPresentes + 0.001;
+      var listaTxt = passa
+        ? " A lista atual soma " + brl(r.presentes) + " e passa desse teto em " + brl(arred(r.presentes - r.orcamentoPresentes)) + "."
+        : " A lista atual soma " + brl(r.presentes) + " e cabe nesse limite.";
+      return {
+        kind: passa ? "warn" : "ok",
+        title: "Teto sugerido por presente",
+        body: meio + listaTxt
+      };
+    }
+
+    function textoJaneiro(r) {
+      if (r.situacaoJaneiro === "vazio") {
+        return {
+          kind: "info",
+          title: "Janeiro sem valores",
+          body: "IPTU, IPVA, material escolar, matrícula e fatura ficaram em branco. O alerta de janeiro aparece quando alguma dessas contas tem valor."
+        };
+      }
+      if (r.situacaoJaneiro === "fecha") {
+        return {
+          kind: "ok",
+          title: "Janeiro fecha",
+          body: "Depois dos gastos de Natal sobram " + brl(r.sobraAposNatal) + ". As contas de janeiro somam " + brl(r.janeiro) + "."
+        };
+      }
+      if (r.sobraAposNatal < 0) {
+        return {
+          kind: "warn",
+          title: "Janeiro não fecha",
+          body: "Os gastos de Natal já passam do valor disponível em " + brl(Math.abs(r.sobraAposNatal)) + ". As contas de janeiro somam " + brl(r.janeiro) + ". Faltam " + brl(r.faltaJaneiro) + " para cobrir a festa e as contas de janeiro."
+        };
+      }
+      return {
+        kind: "warn",
+        title: "Janeiro não fecha",
+        body: "Depois dos gastos de Natal sobram " + brl(r.sobraAposNatal) + ", e as contas de janeiro somam " + brl(r.janeiro) + ". Faltam " + brl(r.faltaJaneiro) + " para IPTU, IPVA, material escolar, matrícula e a fatura."
+      };
+    }
+
+    function detalhesDe(r) {
+      var pessoas = r.lista.map(function (item) {
+        return (item.nome || "sem nome") + " " + brl(item.valor);
+      }).join(", ");
+      var saldo = r.diferenca < -0.001
+        ? "Falta " + brl(Math.abs(r.diferenca)) + "."
+        : "Sobra " + brl(Math.max(r.diferenca, 0)) + ".";
+      var janeiroTxt = r.situacaoJaneiro === "nao-fecha"
+        ? "Janeiro não fecha: faltam " + brl(r.faltaJaneiro) + " depois dos gastos de Natal."
+        : r.situacaoJaneiro === "fecha"
+          ? "Janeiro fecha: sobram " + brl(r.sobraAposNatal) + " depois do Natal, diante de " + brl(r.janeiro) + " em contas."
+          : "Nenhuma conta de janeiro foi informada.";
+      return "Valor disponível: " + brl(r.disponivel) + ". " +
+        "Contas de janeiro: IPTU " + brl(r.iptu) + " + IPVA " + brl(r.ipva) + " + material escolar " + brl(r.material) + " + matrícula " + brl(r.matricula) + " + fatura " + brl(r.fatura) + " = " + brl(r.janeiro) + ". " +
+        "Presentes (" + (pessoas || "nenhum") + "): " + brl(r.presentes) + ". " +
+        "Ceia " + brl(r.ceia) + ", decoração " + brl(r.decoracao) + ", viagens e confraternizações " + brl(r.viagens) + ". " +
+        "Total gasto previsto = " + brl(r.totalGasto) + ". Reserva desejada = " + brl(r.reserva) + ". " +
+        "Comprometido (gastos + reserva) = " + brl(r.comprometido) + ", o que dá " + formatPct(r.percentual) + " do valor disponível. " +
+        saldo + " " + janeiroTxt + " " +
+        "Orçamento de presentes = disponível − janeiro − ceia − decoração − viagens − reserva = " + brl(r.orcamentoPresentes) + ".";
+    }
+
+    function render(dados) {
+      var r = calcularOrcamento(dados);
+      document.getElementById("out-disponivel").textContent = brl(r.disponivel);
+      document.getElementById("out-janeiro").textContent = brl(r.janeiro);
+      document.getElementById("out-janeiro-hint").textContent = "IPTU, IPVA, material, matrícula e fatura";
+      document.getElementById("out-presentes").textContent = brl(r.presentes);
+      document.getElementById("out-presentes-hint").textContent = r.nPresentes === 1 ? "1 presente na lista" : r.nPresentes + " presentes na lista";
+      document.getElementById("out-ceia").textContent = brl(r.ceia);
+      document.getElementById("out-decoracao").textContent = brl(r.decoracao);
+      document.getElementById("out-viagens").textContent = brl(r.viagens);
+      document.getElementById("out-total").textContent = brl(r.totalGasto);
+      document.getElementById("out-reserva").textContent = brl(r.reserva);
+
+      var pct = document.getElementById("out-pct");
+      pct.textContent = formatPct(r.percentual);
+      pct.className = "val" + (r.percentual > 100.05 ? " is-warn" : "");
+
+      var falta = r.diferenca < -0.001;
+      document.getElementById("out-saldo-label").textContent = falta ? "Falta" : "Sobra";
+      document.getElementById("out-saldo-hint").textContent = falta
+        ? "Quanto os gastos e a reserva passam do valor disponível."
+        : r.diferenca <= 0.001
+          ? "A conta fecha sem dinheiro sobrando."
+          : "Valor disponível menos gastos e reserva.";
+      var saldo = document.getElementById("out-saldo");
+      saldo.textContent = brl(Math.abs(r.diferenca));
+      saldo.className = "val" + (falta ? " is-warn" : "");
+
+      var avisoJan = textoJaneiro(r);
+      setNotice(document.getElementById("aviso-janeiro"), avisoJan.kind, avisoJan.title, avisoJan.body);
+      var avisoTeto = textoTeto(r);
+      setNotice(document.getElementById("aviso-teto"), avisoTeto.kind, avisoTeto.title, avisoTeto.body);
+      document.getElementById("detalhes").textContent = detalhesDe(r);
+
+      erro.hidden = true;
+      placeholder.hidden = true;
+      resultado.hidden = false;
+    }
+
+    function recalcular(rolar) {
+      var lido = lerCampos();
+      if (lido.erro) {
+        mostrarErro(lido.erro);
+        return;
+      }
+      render(lido.dados);
+      if (rolar) {
+        document.getElementById("resultado").scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+    }
+
+    function atualizarBotaoAdd() {
+      var n = lista.querySelectorAll(".gift-row").length;
+      addBtn.disabled = n >= LIMITE_PRESENTES;
+      addBtn.textContent = n >= LIMITE_PRESENTES ? "Limite de 30 presentes" : "Adicionar presente";
+    }
+
+    function adicionarLinha() {
+      if (lista.querySelectorAll(".gift-row").length >= LIMITE_PRESENTES) return;
+      var row = document.createElement("div");
+      row.className = "gift-row";
+
+      var labelNome = document.createElement("label");
+      labelNome.appendChild(document.createTextNode("Nome"));
+      var inputNome = document.createElement("input");
+      inputNome.type = "text";
+      inputNome.className = "gift-nome";
+      inputNome.placeholder = "Ex.: Ana, amigo oculto";
+      inputNome.autocomplete = "off";
+      inputNome.maxLength = 80;
+      labelNome.appendChild(inputNome);
+
+      var labelValor = document.createElement("label");
+      labelValor.appendChild(document.createTextNode("Valor"));
+      var inputValor = document.createElement("input");
+      inputValor.type = "text";
+      inputValor.className = "gift-valor";
+      inputValor.placeholder = "0,00";
+      inputValor.inputMode = "decimal";
+      inputValor.autocomplete = "off";
+      labelValor.appendChild(inputValor);
+
+      var remove = document.createElement("button");
+      remove.type = "button";
+      remove.className = "btn-remove";
+      remove.textContent = "Remover";
+
+      function sincronizar() {
+        var nome = inputNome.value.trim();
+        remove.setAttribute("aria-label", nome ? "Remover presente de " + nome : "Remover presente");
+      }
+      inputNome.addEventListener("input", sincronizar);
+      sincronizar();
+
+      row.append(labelNome, labelValor, remove);
+      lista.appendChild(row);
+      atualizarBotaoAdd();
+    }
+
+    lista.addEventListener("click", function (ev) {
+      var btn = ev.target.closest("button");
+      if (!btn || !lista.contains(btn)) return;
+      var row = btn.closest(".gift-row");
+      if (row) row.remove();
+      atualizarBotaoAdd();
+      if (jaCalculou) recalcular(false);
+    });
+
+    addBtn.addEventListener("click", function () {
+      adicionarLinha();
+      var linhas = lista.querySelectorAll(".gift-nome");
+      if (linhas.length) linhas[linhas.length - 1].focus();
+    });
+
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      jaCalculou = true;
+      recalcular(true);
+    });
+
+    form.addEventListener("input", function () {
+      if (jaCalculou) recalcular(false);
+    });
+
+    adicionarLinha();
+    adicionarLinha();
+  })();
+  </script>
+</body>
+</html>
