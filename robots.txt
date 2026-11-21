@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yurizanoni.com/sitemap.xml
+Sitemap: https://fluxo.yurizanoni.com/sitemap.xml
